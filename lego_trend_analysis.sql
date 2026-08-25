@@ -1,0 +1,38 @@
+-- TREND ANALYSIS 
+
+-- HOW HAS THE NO OF LEGO SETS CHANGED OVER TIME?
+SELECT
+YEAR,
+COUNT(*) AS TOTAL_SETS
+FROM lego_sets
+GROUP BY year
+ORDER BY YEAR; -- THIS CAN BECOME A LINE CHART
+
+-- WHICH THEMES BECAME POPULAR IN RECENT YEARS?
+SELECT
+    theme,
+    COUNT(*) AS total_sets
+FROM lego_sets
+WHERE year >= 2017
+GROUP BY theme
+ORDER BY total_sets DESC
+LIMIT 10;
+
+-- hOW HAS THE AVERAGE NUMBER OF PIECES CHANGED?
+SELECT
+    year,
+    ROUND(AVG(pieces), 2) AS avg_pieces
+FROM lego_sets
+WHERE pieces IS NOT NULL
+GROUP BY year
+ORDER BY year;
+
+-- HOW HAS THE AVERAGE PRICE CHANGED OVER TIME?
+SELECT
+    year,
+    ROUND(AVG(US_retailPrice), 2) AS avg_price
+FROM lego_sets
+WHERE US_retailPrice IS NOT NULL
+GROUP BY year
+ORDER BY year;
+
