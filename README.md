@@ -5,6 +5,11 @@ This project analyzes 18,000+ LEGO sets released between 1970 and 2022 to uncove
 
 The project combines MySQL for data analysis and Power BI for interactive visualization, creating an end-to-end workflow from raw dataset to actionable insights.
 
+<br>
+The following the the overview of revenue generated over time:
+
+![image alt](https://github.com/disha4002/LEGO-Data-Analysis--SQL-and-Power-BI-Project/blob/a609153eaaaccb360a098cf62a7cb0e3792f225e/Screenshot%202026-09-01%20134113.png)
+
 ## 🎯 Objectives
 
 The analysis focuses on answering questions such as:
